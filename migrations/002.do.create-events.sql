@@ -8,6 +8,5 @@ CREATE TABLE events(
     creatorEmail VARCHAR(255) NOT NULL,
     invited int[],
     accepted int[],
-    declined int[],
-    FOREIGN KEY(creator) REFERENCES users(id)
+    declined int[]
 );

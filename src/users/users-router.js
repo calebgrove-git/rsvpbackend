@@ -32,7 +32,7 @@ usersRouter.route('/create').post(jsonParser, async (req, res, next) => {
       .then((user) => {
         res
           .status(201)
-          .location(path.posix.join(req.originalUrl, `/${user.name}`))
+          .location(path.posix.join(req.originalUrl, `/${user.email}`))
           .json(serializeUser(user));
       })
       .catch(next);
